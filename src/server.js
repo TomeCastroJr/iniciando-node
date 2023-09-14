@@ -1,10 +1,14 @@
+require("express-async-errors")
 const AppError = require("./utils/AppError")
+const migrationsRun = require("./database/migrations")
 const express = require("express")
 const app = express()
 
 const routes = require("./routes/index.js")
 
 app.use(express.json())
+migrationsRun();
+
 app.use(routes)
 
 app.use(( error, request, response, next )=>{
