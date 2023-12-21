@@ -1,6 +1,3 @@
-/*Padronizar os erros e mensagens */
-
-
 class AppError{
     message;
     statusCode;

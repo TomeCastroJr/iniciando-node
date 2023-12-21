@@ -67,6 +67,7 @@ class UsersController {
 
         return response.status(200).json()     
    }
+
     
 }
 
